@@ -12,13 +12,13 @@ int main() {
     int *matrix = (int *)calloc(m * n, sizeof(int));
     if (matrix == NULL) {
         printf("Error: No se pudo asignar memoria.\n");
-        
+        return 1;
     }
 
     printf("Matriz inicializada con ceros:\n");
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            printf("%d," , matrix[i * m + j]);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j <  m; j++) {
+            printf("%d," , matrix[i * n + j]);
             
         }
         printf("\n");
@@ -31,8 +31,8 @@ int main() {
     matrix[(row-1) * n + (col-1)] = value;
 
     printf("Matriz actualizada:\n");
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
             printf("%d," , matrix[i * m + j]);
         }
         printf("\n");

@@ -19,7 +19,7 @@ int main() {
         }
         if (count >= size) {
             size *= 2;
-           int *temp = ((int*)realloc(temp, size *sizeof(int))) ; //utiliza realloc para cambiar el tamaño del arreglo
+           int *temp = ((int*)realloc(arr, size *sizeof(int))) ; //utiliza realloc para cambiar el tamaño del arreglo
             if (temp == NULL) {
                 printf("Error: No se pudo reasignar memoria.\n");
                 free(arr);
